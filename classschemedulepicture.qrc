@@ -7,6 +7,9 @@
         <file>picture/userIcon.png</file>
         <file>picture/nameIcon.png</file>
         <file>stylesheet.qss</file>
+        <file>template/Student.xlsx</file>
+        <file>template/Teacher.xlsx</file>
+        <file>picture/background2.png</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

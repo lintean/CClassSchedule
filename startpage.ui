@@ -24,7 +24,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -40,15 +40,7 @@
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">    color: rgb(21,87,153);
-    border-radius: 5px;
-    background-color: white;
-    background-clip: border-box;
-    background-origin: border-box;
-    box-shadow: none;
-    padding: 0;
-    border: 1px solid rgb(21,87,153);
-	font-size:16px;</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>返回</string>
@@ -64,15 +56,7 @@
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">    color: rgb(21,87,153);
-    border-radius: 5px;
-    background-color: white;
-    background-clip: border-box;
-    background-origin: border-box;
-    box-shadow: none;
-    padding: 0;
-    border: 1px solid rgb(21,87,153);
-	font-size:16px;</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>导入文件</string>
@@ -88,18 +72,10 @@
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">    color: rgb(21,87,153);
-    border-radius: 5px;
-    background-color: white;
-    background-clip: border-box;
-    background-origin: border-box;
-    box-shadow: none;
-    padding: 0;
-    border: 1px solid rgb(21,87,153);
-	font-size:16px;</string>
+         <string notr="true"/>
         </property>
         <property name="text">
-         <string>查看模板</string>
+         <string>导出模板</string>
         </property>
        </widget>
       </widget>
@@ -112,7 +88,7 @@
          <rect>
           <x>230</x>
           <y>120</y>
-          <width>91</width>
+          <width>101</width>
           <height>20</height>
          </rect>
         </property>
@@ -122,7 +98,7 @@
          <rect>
           <x>230</x>
           <y>170</y>
-          <width>91</width>
+          <width>101</width>
           <height>20</height>
          </rect>
         </property>
@@ -132,7 +108,7 @@
          <rect>
           <x>230</x>
           <y>220</y>
-          <width>91</width>
+          <width>101</width>
           <height>20</height>
          </rect>
         </property>
@@ -142,7 +118,7 @@
          <rect>
           <x>230</x>
           <y>270</y>
-          <width>91</width>
+          <width>101</width>
           <height>20</height>
          </rect>
         </property>
@@ -152,8 +128,8 @@
          <rect>
           <x>230</x>
           <y>70</y>
-          <width>91</width>
-          <height>20</height>
+          <width>101</width>
+          <height>21</height>
          </rect>
         </property>
        </widget>
@@ -162,9 +138,15 @@
          <rect>
           <x>110</x>
           <y>70</y>
-          <width>81</width>
+          <width>101</width>
           <height>21</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>12</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>每周上课天数</string>
@@ -175,9 +157,15 @@
          <rect>
           <x>110</x>
           <y>120</y>
-          <width>91</width>
+          <width>101</width>
           <height>21</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>12</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>每天上课节数</string>
@@ -188,9 +176,15 @@
          <rect>
           <x>110</x>
           <y>170</y>
-          <width>81</width>
+          <width>101</width>
           <height>21</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>12</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>现有教室数目</string>
@@ -201,9 +195,15 @@
          <rect>
           <x>110</x>
           <y>220</y>
-          <width>91</width>
+          <width>101</width>
           <height>21</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>12</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>教室容纳人数</string>
@@ -214,9 +214,15 @@
          <rect>
           <x>110</x>
           <y>270</y>
-          <width>91</width>
+          <width>101</width>
           <height>20</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>12</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>已有班级数量</string>
@@ -225,11 +231,17 @@
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>180</x>
+          <x>170</x>
           <y>20</y>
-          <width>81</width>
+          <width>111</width>
           <height>31</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>12</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>填写数字即可</string>
@@ -245,15 +257,7 @@
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">    color: rgb(21,87,153);
-    border-radius: 5px;
-    background-color: white;
-    background-clip: border-box;
-    background-origin: border-box;
-    box-shadow: none;
-    padding: 0;
-    border: 1px solid rgb(21,87,153);
-	font-size:16px;</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>下一步</string>
@@ -267,22 +271,14 @@
        <widget class="QPushButton" name="start">
         <property name="geometry">
          <rect>
-          <x>110</x>
-          <y>150</y>
+          <x>120</x>
+          <y>160</y>
           <width>191</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">    color: rgb(21,87,153);
-    border-radius: 5px;
-    background-color: white;
-    background-clip: border-box;
-    background-origin: border-box;
-    box-shadow: none;
-    padding: 0;
-    border: 1px solid rgb(21,87,153);
-	font-size:16px;</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>开始排课</string>
@@ -296,48 +292,30 @@
        <widget class="QPushButton" name="export_2">
         <property name="geometry">
          <rect>
-          <x>100</x>
-          <y>170</y>
-          <width>201</width>
+          <x>140</x>
+          <y>200</y>
+          <width>161</width>
           <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">    color: rgb(21,87,153);
-    border-radius: 5px;
-    background-color: white;
-    background-clip: border-box;
-    background-origin: border-box;
-    box-shadow: none;
-    padding: 0;
-    border: 1px solid rgb(21,87,153);
-	font-size:16px;</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>导出文件</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_7">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>100</y>
-          <width>41</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>ID</string>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="ID">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>100</y>
-          <width>91</width>
-          <height>20</height>
+          <x>120</x>
+          <y>120</y>
+          <width>201</width>
+          <height>31</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
         </property>
        </widget>
       </widget>

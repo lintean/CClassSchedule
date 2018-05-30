@@ -7,19 +7,19 @@ login::login(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QImage *qImage = new QImage(":/new/prefix1/picture/userIcon.png");
-    QImage qScaledImage = ScaleImage2Label(*qImage,ui->accountLabel);
-    ui->accountLabel->setPixmap(QPixmap::fromImage(qScaledImage));
-    ui->accountLabel->setAlignment(Qt::AlignCenter);
-    ui->accountLabel->show();
-    qImage = new QImage(":/new/prefix1/picture/pwdIcon.png");
-    qScaledImage = ScaleImage2Label(*qImage,ui->passwordLabel);
-    ui->passwordLabel->setPixmap(QPixmap::fromImage(qScaledImage));
-    ui->passwordLabel->setAlignment(Qt::AlignCenter);
-    ui->passwordLabel->show();
+//    QImage *qImage = new QImage(":/new/prefix1/picture/userIcon.png");
+//    QImage qScaledImage = ScaleImage2Label(*qImage,ui->accountLabel);
+//    ui->accountLabel->setPixmap(QPixmap::fromImage(qScaledImage));
+//    ui->accountLabel->setAlignment(Qt::AlignCenter);
+//    ui->accountLabel->show();
+//    qImage = new QImage(":/new/prefix1/picture/pwdIcon.png");
+//    qScaledImage = ScaleImage2Label(*qImage,ui->passwordLabel);
+//    ui->passwordLabel->setPixmap(QPixmap::fromImage(qScaledImage));
+//    ui->passwordLabel->setAlignment(Qt::AlignCenter);
+//    ui->passwordLabel->show();
 
-    ui->accountLineEdit->setPlaceholderText("请输入账号");
-    ui->passwordLineEdit->setPlaceholderText("请输入密码");
+    ui->accountLineEdit->setPlaceholderText("账号");
+    ui->passwordLineEdit->setPlaceholderText("密码");
 
     mMoveing=false;
     ui->loginButton->setEnabled(false);
@@ -37,23 +37,23 @@ login::~login()
     delete ui;
 }
 
-QImage login::ScaleImage2Label(QImage qImage, QLabel* qLabel)
-{
-    QImage qScaledImage;
-    QSize qImageSize = qImage.size();
-    QSize qLabelSize = qLabel->size();
-    double dWidthRatio = 1.0*qImageSize.width() / qLabelSize.width();
-    double dHeightRatio = 1.0*qImageSize.height() / qLabelSize.height();
-    if (dWidthRatio>dHeightRatio)
-    {
-        qScaledImage = qImage.scaledToWidth(qLabelSize.width());
-    }
-    else
-    {
-        qScaledImage = qImage.scaledToHeight(qLabelSize.height());
-    }
-    return qScaledImage;
-}
+//QImage login::ScaleImage2Label(QImage qImage, QLabel* qLabel)
+//{
+//    QImage qScaledImage;
+//    QSize qImageSize = qImage.size();
+//    QSize qLabelSize = qLabel->size();
+//    double dWidthRatio = 1.0*qImageSize.width() / qLabelSize.width();
+//    double dHeightRatio = 1.0*qImageSize.height() / qLabelSize.height();
+//    if (dWidthRatio>dHeightRatio)
+//    {
+//        qScaledImage = qImage.scaledToWidth(qLabelSize.width());
+//    }
+//    else
+//    {
+//        qScaledImage = qImage.scaledToHeight(qLabelSize.height());
+//    }
+//    return qScaledImage;
+//}
 
 void login::loginButtonToUse()
 {

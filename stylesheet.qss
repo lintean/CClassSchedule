@@ -1,7 +1,7 @@
-#exitButton,#loginButton
+#exitButton,#loginButton,#regButton
 {
     color: rgb(21,87,153);
-    border-radius: 5px;
+    border-radius: 4px;
     background-color: white;
     background-clip: border-box;
     background-origin: border-box;
@@ -9,20 +9,137 @@
     padding: 0;
     border: 1px solid rgb(21,87,153);
     font-size:16px;
+    font-family: "微软雅黑";
 }
 
-#accountLineEdit, #passwordLineEdit
+#userNameLineEdit, #acLineEdit, #passwordLineEdit, #repeatPasswordLineEdit, #pwdLineEdit, #accountLineEdit
 {
     height:25px;
-    background-color:rgb(243,243,243);
     font-size:12px;
     border:1px solid rgb(21,87,153);
+    border-radius:4px;
 }
 
-#userNameLineEdit, #passwordLineEdit, #repeatPasswordLineEdit
+#loginButton:hover, #regButton:hover, #exitButton:hover
 {
-    height:25px;
-    background-color:rgb(243,243,243);
-    font-size:12px;
-    border:1px solid rgb(21,87,153);
+    background-color: rgba(255,255,255,150);
+    border:1px solid rgb(50,133,255);
+    color:rgb(50,133,255);
 }
+
+#loginButton:disabled, #regButton:disabled, #exitButton:disabled
+{
+    border:1px solid rgb(150,150,150);
+    color:rgb(150,150,150);
+}
+
+#userNameLineEdit:focus,
+#acLineEdit:focus,
+#passwordLineEdit:focus,
+#repeatPasswordLineEdit:focus,
+#pwdLineEdit:focus,
+#accountLineEdit:focus
+{
+    border:1px solid rgb(50,133,255);
+}
+
+
+QTabWidget
+{
+    font-size:14px;
+    color:rgb(50,50,50);
+}
+
+QTabWidget QLabel
+{
+    color:rgb(50,50,50);
+    font-family: "微软雅黑";
+}
+
+QTabWidget QLineEdit:focus
+{
+    border:1px solid rgb(50,133,255);
+}
+
+QTabWidget QLineEdit
+{
+    border:1px solid rgb(21,87,153);
+    height:30px;
+    border-radius:4px;
+}
+
+QTabWidget #export_demo,
+QTabWidget #import_2,
+QTabWidget #returnButton,
+QTabWidget #pushButton,
+QTabWidget #start,
+QTabWidget #export_2
+{
+    color: rgb(21,87,153);
+    border-radius: 4px;
+    background-color: white;
+    background-clip: border-box;
+    background-origin: border-box;
+    padding: 0;
+    border: 1px solid rgb(21,87,153);
+    font-size:16px;
+    font-family: "微软雅黑";
+}
+
+QTabWidget #export_demo:hover,
+QTabWidget #import_2:hover,
+QTabWidget #returnButton:hover,
+QTabWidget #pushButton:hover,
+QTabWidget #start:hover,
+QTabWidget #export_2:hover
+{
+    background-color: transparent;
+    border:1px solid rgb(50,133,255);
+    color:rgb(50,133,255);
+}
+
+QTabWidget #export_demo:disable,
+QTabWidget #import_2:disable,
+QTabWidget #returnButton:disable,
+QTabWidget #pushButton:disable,
+QTabWidget #start:disable,
+QTabWidget #export_2:disable
+{
+    border:1px solid rgb(150,150,150);
+    color:rgb(150,150,150);
+}
+
+QTabWidget::pane{
+    border: none;
+    background-color:rgba(250,250,250,240);
+    position: absolute;
+    border-top-left-radius:0;
+    border-top-right-radius:0;
+    border-bottom-right-radius:4px;
+    border-bottom-left-radius:4px;
+}
+
+QTabWidget::tab-bar{
+    alignment:left;
+}
+QTabBar::tab{
+    background:transparent;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
+    color:rgb(21,87,153);
+    width:110px;
+    height:30px;
+}
+QTabBar::tab:hover{
+    background:rgb(255, 255, 255, 200);
+}
+QTabBar::tab:selected{
+    border-bottom: 1.5px solid rgb(21,87,153);
+
+    background-color:rgba(255,255,255,240);
+    color:rgb(50,133,255);
+}
+
+

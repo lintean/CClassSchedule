@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>20</y>
+     <y>10</y>
      <width>431</width>
      <height>411</height>
     </rect>
@@ -31,116 +31,11 @@
    <property name="title">
     <string>用户注册</string>
    </property>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>100</y>
-      <width>261</width>
-      <height>33</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="styleSheet">
-        <string notr="true">height:25px;
-width:25px;
-font-size:12px</string>
-       </property>
-       <property name="text">
-        <string>账号：      </string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="accountLineEdit">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">height:25px;
-font-size:12px;
-</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>150</y>
-      <width>261</width>
-      <height>33</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <widget class="QLabel" name="label_3">
-       <property name="styleSheet">
-        <string notr="true">height:25px;
-width:25px;
-font-size:12px</string>
-       </property>
-       <property name="text">
-        <string>密码：      </string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="passwordLineEdit">
-       <property name="styleSheet">
-        <string notr="true">height:25px;
-font-size:12px;
-</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget_3">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>200</y>
-      <width>261</width>
-      <height>33</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
-     <item>
-      <widget class="QLabel" name="label_4">
-       <property name="styleSheet">
-        <string notr="true">height:25px;
-width:25px;
-font-size:12px</string>
-       </property>
-       <property name="text">
-        <string>密码：      </string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="repeatPasswordLineEdit">
-       <property name="styleSheet">
-        <string notr="true">height:25px;
-font-size:12px;
-</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QPushButton" name="registerButton">
+   <widget class="QPushButton" name="regButton">
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>300</y>
+      <y>310</y>
       <width>191</width>
       <height>31</height>
      </rect>
@@ -148,63 +43,24 @@ font-size:12px;
     <property name="font">
      <font>
       <family>微软雅黑</family>
-      <pointsize>-1</pointsize>
+      <pointsize>14</pointsize>
       <weight>9</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">    color: rgb(21,87,153);
-    border-radius: 5px;
-    background-color: white;
-    background-clip: border-box;
-    background-origin: border-box;
-    box-shadow: none;
-    padding: 0;
-    border: 1px solid rgb(21,87,153);
-    font-size:16px;</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>注册</string>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget_4">
-    <property name="geometry">
-     <rect>
-      <x>90</x>
-      <y>50</y>
-      <width>261</width>
-      <height>33</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="styleSheet">
-        <string notr="true">font-size:12px</string>
-       </property>
-       <property name="text">
-        <string>用户名：   </string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="userNameLineEdit">
-       <property name="styleSheet">
-        <string notr="true">height:25px;
-font-size:12px;
-</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QPushButton" name="returnButton">
+   <widget class="QPushButton" name="toLoginButton">
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>260</y>
+      <y>270</y>
       <width>201</width>
       <height>31</height>
      </rect>
@@ -228,6 +84,64 @@ font-size:12px;
     </property>
     <property name="text">
      <string>已有账号？立即登录&gt;&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="userNameLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>70</y>
+      <width>229</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:12px;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="acLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>120</y>
+      <width>229</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:12px;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pwdLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>170</y>
+      <width>229</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:12px;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="repeatPasswordLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>220</y>
+      <width>229</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size:12px;</string>
     </property>
    </widget>
   </widget>

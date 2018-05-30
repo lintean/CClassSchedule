@@ -37,6 +37,7 @@ class startpage : public QMainWindow
 
 public:
     explicit startpage(QWidget *parent = 0);
+    int checkText();
     ~startpage();
 
 private:
@@ -55,6 +56,7 @@ private slots:
     void on_start_clicked();
     void on_export_2_clicked();
     void on_export_demo_clicked();
+    void on_pushButton_clicked();
 };
 
 #endif // STARTPAGE_H

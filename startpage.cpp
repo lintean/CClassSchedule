@@ -2,6 +2,7 @@
 #include "ui_startpage.h"
 
 QString file_stu,file_tea,day,time_pw,stu_num,room_num,class_num,export_filename;
+int flag = 0;
 Export e;
 
 startpage::startpage(QWidget *parent) :
@@ -9,10 +10,14 @@ startpage::startpage(QWidget *parent) :
     ui(new Ui::startpage)
 {
     ui->setupUi(this);
+
+    ui->ID->setPlaceholderText("       输入ID获取部分课表");
+
     mMoveing=false;
     this->setWindowOpacity(1);
     setWindowFlags(Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint |Qt::WindowStaysOnTopHint);
     this->setAttribute(Qt::WA_TranslucentBackground);
+    ui->tabWidget->setCurrentIndex(0);
 
 }
 
@@ -50,7 +55,7 @@ void startpage::paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);
-    painter.setBrush(QBrush(QPixmap(":/new/prefix1/picture/background.jpg").scaled(this->size())));
+    painter.setBrush(QBrush(QPixmap(":/new/prefix1/picture/background.png").scaled(this->size())));
     painter.setPen(Qt::transparent);
     QRect rect = this->rect();
     rect.setWidth(rect.width() - 1);
@@ -83,13 +88,16 @@ void startpage::on_import_2_clicked()
 
         if(fileNameList.size()<2)
         {
-            QMessageBox msgbox ;
-            msgbox.setText("请导入两个文件");
-            msgbox.exec();
+            QMessageBox::information(this,"通知","请导入两个ExceL文件");
             return ;
-
         }
 
+        if ((fileNameList[0].contains("Teacher.xls",Qt::CaseSensitive) && fileNameList[1].contains("Student.xls",Qt::CaseSensitive))
+                ||  (fileNameList[1].contains("Teacher.xls",Qt::CaseSensitive) && fileNameList[0].contains("Student.xls",Qt::CaseSensitive)));
+        else {
+            QMessageBox::information(this,"通知","请导入正确的ExceL文件");
+            return ;
+        }
         //当没有导入两个文件的时候进行阻塞并挂起
 
 
@@ -108,7 +116,8 @@ void startpage::on_import_2_clicked()
         //for test
        // qDebug()<<file_stu<<"   "<<file_tea<<endl;
 
-
+    QMessageBox::information(this,"通知","导入文件成功");
+    flag = 1;
 
     }
     else
@@ -118,6 +127,21 @@ void startpage::on_import_2_clicked()
 
 void startpage::on_start_clicked()
 {
+    //检测有没有成功导入两个文件
+    if(flag  == 0)
+    {
+        QMessageBox::information(this,"通知","请确保已经成功导入Excel文件");
+    }
+
+
+    //检测填写
+    if(checkText() != 0 )
+        {
+            QMessageBox::information(this,"通知","请确保约束条件填写正确！");
+            return;
+        }
+
+
     //初始化上课天数和上课节数以及教室数目和容纳人数
     day = ui->Day->text();
     time_pw = ui->Time->text();
@@ -187,8 +211,9 @@ void startpage::on_start_clicked()
 
 
 
-   qDebug()<<"End"<<endl;
+    qDebug()<<"End"<<endl;
     out.close();
+    system("class.exe");
 }
 
 
@@ -254,6 +279,24 @@ void startpage::on_export_2_clicked()
             qDebug()<<"lose";
     }
 }
+int startpage::checkText()
+{
+    if(ui->class_num->text() == "" ||ui->Day->text() == ""|| ui->Time->text() == ""|| ui->stu_num->text() == ""||ui->room_num->text() == ""  )
+    {
+
+
+        return 1; //请填写完整相关约束条件
+    }
+    else{
+        if(ui->class_num->text().toInt() == 0 ||ui->Day->text().toInt() == 0|| ui->Time->text().toInt() == 0|| ui->stu_num->text().toInt() == 0||ui->room_num->text().toInt() == 0 )
+            {
+
+
+                return 2;//确保仅填写数字且不为0
+            }
+        return 0 ;//填写正确
+    }
+}
 
 void startpage::on_export_demo_clicked()
 {
@@ -261,8 +304,8 @@ void startpage::on_export_demo_clicked()
     QString export_filename_stu = "Student.xlsx";
     QString export_filename_tea = "Teacher.xlsx";
 
-    QDir dir_stu("./template/"+export_filename_stu);
-    QDir dir_tea("./template/"+export_filename_tea);
+    QDir dir_stu(":/new/prefix1/template/Student.xlsx");
+    QDir dir_tea(":/new/prefix1/template/Teacher.xlsx");
 
     //导出的文件夹的目录
     QString saveDir  = QFileDialog::getExistingDirectory(this,tr("文件另存为"),"",QFileDialog:: QFileDialog::ShowDirsOnly
@@ -283,5 +326,20 @@ void startpage::on_export_demo_clicked()
         else
 
             qDebug()<<"lose"<<"    "<<dir_stu.absolutePath() ;
+    }
+}
+
+void startpage::on_pushButton_clicked()
+{
+     if( checkText() == 1)
+     {
+          QMessageBox::information(this,"通知","请填写完整相关约束条件");
+     }
+     if( checkText() == 2)
+     {
+          QMessageBox::information(this,"通知","请确保仅填写数字且不为0");
+     }
+     else{
+         ui->tabWidget->setCurrentIndex(2);
     }
 }
