@@ -10,6 +10,7 @@
         <file>template/Student.xlsx</file>
         <file>template/Teacher.xlsx</file>
         <file>picture/background2.png</file>
+        <file>picture/favicon-20180531013632939.ico</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

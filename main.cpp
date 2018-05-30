@@ -11,6 +11,8 @@ int main(int argc, char *argv[])
     a.setStyleSheet(qss.readAll());
     qss.close();
 
+    a.setWindowIcon(QIcon(":/new/prefix1/picture/favicon-20180531013632939.ico"));
+
     login w;
     w.show();
 

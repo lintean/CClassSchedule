@@ -1,5 +1,6 @@
 #include "startpage.h"
 #include "ui_startpage.h"
+#include <windows.h>
 
 QString file_stu,file_tea,day,time_pw,stu_num,room_num,class_num,export_filename;
 int flag = 0;
@@ -70,6 +71,7 @@ void startpage::on_returnButton_clicked()
     l->show();
 }
 
+//导入文件
 void startpage::on_import_2_clicked()
 {
     QStringList    fileNameList;
@@ -124,7 +126,7 @@ void startpage::on_import_2_clicked()
     fd->close();
 }
 
-
+//开始排课
 void startpage::on_start_clicked()
 {
     //检测有没有成功导入两个文件
@@ -213,10 +215,33 @@ void startpage::on_start_clicked()
 
     qDebug()<<"End"<<endl;
     out.close();
-    system("class.exe");
+    ifstream file ;
+    string buf;
+    QString Qbuf;
+    file.open("checkresult.txt");
+    system("class.exe>checkresult.txt");
+
+
+    char buffer[100];
+
+    while(!file.eof())
+    {
+        file.getline(buffer,100);
+        buf = string(buffer);
+        Qbuf = QString::fromStdString(buf);
+        qDebug()<<Qbuf;
+      if(Qbuf.contains("fuck"))
+      {
+           QMessageBox::information(this,"通知","排课失败");
+           return ;
+      }
+       QMessageBox::information(this,"通知","排课成功");
+    qDebug()<<Qbuf;
+    return ;
+}
 }
 
-
+//导出课表
 void startpage::on_export_2_clicked()
 {
     QVector<QString> buf_out;
@@ -279,6 +304,9 @@ void startpage::on_export_2_clicked()
             qDebug()<<"lose";
     }
 }
+
+
+//检查约束条件是否填写正确
 int startpage::checkText()
 {
     if(ui->class_num->text() == "" ||ui->Day->text() == ""|| ui->Time->text() == ""|| ui->stu_num->text() == ""||ui->room_num->text() == ""  )
@@ -298,6 +326,7 @@ int startpage::checkText()
     }
 }
 
+//导出文件
 void startpage::on_export_demo_clicked()
 {
 
