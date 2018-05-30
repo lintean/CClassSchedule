@@ -62,9 +62,10 @@ font-size:12px</string>
         </sizepolicy>
        </property>
        <property name="styleSheet">
-        <string notr="true">height:25px;
-font-size:12px;
-</string>
+        <string notr="true">    height:25px;
+    background-color:rgb(243,243,243);
+    font-size:12px;
+    border:1px solid rgb(21,87,153);</string>
        </property>
       </widget>
      </item>

@@ -6,6 +6,7 @@
         <file>picture/pwdIcon.png</file>
         <file>picture/userIcon.png</file>
         <file>picture/nameIcon.png</file>
+        <file>stylesheet.qss</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

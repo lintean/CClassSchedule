@@ -1,0 +1,28 @@
+#exitButton,#loginButton
+{
+    color: rgb(21,87,153);
+    border-radius: 5px;
+    background-color: white;
+    background-clip: border-box;
+    background-origin: border-box;
+    box-shadow: none;
+    padding: 0;
+    border: 1px solid rgb(21,87,153);
+    font-size:16px;
+}
+
+#accountLineEdit, #passwordLineEdit
+{
+    height:25px;
+    background-color:rgb(243,243,243);
+    font-size:12px;
+    border:1px solid rgb(21,87,153);
+}
+
+#userNameLineEdit, #passwordLineEdit, #repeatPasswordLineEdit
+{
+    height:25px;
+    background-color:rgb(243,243,243);
+    font-size:12px;
+    border:1px solid rgb(21,87,153);
+}
