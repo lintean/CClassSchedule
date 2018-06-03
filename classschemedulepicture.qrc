@@ -3,14 +3,11 @@
         <file>picture/background.png</file>
         <file>picture/logoBlue.png</file>
         <file>picture/background.jpg</file>
-        <file>picture/pwdIcon.png</file>
-        <file>picture/userIcon.png</file>
-        <file>picture/nameIcon.png</file>
         <file>stylesheet.qss</file>
         <file>template/Student.xlsx</file>
         <file>template/Teacher.xlsx</file>
-        <file>picture/background2.png</file>
         <file>picture/favicon-20180531013632939.ico</file>
+        <file>picture/background2.jpg</file>
     </qresource>
     <qresource prefix="/"/>
 </RCC>

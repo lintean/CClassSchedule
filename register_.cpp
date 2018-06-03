@@ -33,7 +33,7 @@ register_::register_(QWidget *parent) :
 
     mMoveing=false;
     this->setWindowOpacity(1);
-    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint |Qt::WindowStaysOnTopHint);
+    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint);
     this->setAttribute(Qt::WA_TranslucentBackground);
     ui->pwdLineEdit->setEchoMode(QLineEdit::PasswordEchoOnEdit);
     ui->repeatPasswordLineEdit->setEchoMode(QLineEdit::PasswordEchoOnEdit);

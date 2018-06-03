@@ -24,7 +24,7 @@ login::login(QWidget *parent) :
     mMoveing=false;
     ui->loginButton->setEnabled(false);
     this->setWindowOpacity(1);
-    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint |Qt::WindowStaysOnTopHint);
+    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint);
     //说不好加图片的时候要用
     this->setAttribute(Qt::WA_TranslucentBackground);
     ui->passwordLineEdit->setEchoMode(QLineEdit::Password);
@@ -88,7 +88,7 @@ void login::paintEvent(QPaintEvent *)
     QPainter painter(this);
     painter.fillRect(rect(),QColor(255,255,255,100));
     painter.setRenderHint(QPainter::Antialiasing);
-    painter.setBrush(QBrush(QPixmap(":/new/prefix1/picture/background.jpg").scaled(this->size())));
+    painter.setBrush(QBrush(QPixmap(":/new/prefix1/picture/background2.jpg").scaled(this->size())));
     painter.setPen(Qt::transparent);
     QRect rect = this->rect();
     rect.setWidth(rect.width() - 1);
@@ -97,7 +97,7 @@ void login::paintEvent(QPaintEvent *)
 
     QPixmap pix;
     pix.load(":/new/prefix1/picture/logoBlue.png");
-    painter.drawPixmap(190,50,160,80,pix);
+    painter.drawPixmap(0,0,541,180,pix);
 }
 
 void login::on_loginButton_clicked()

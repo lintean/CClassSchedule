@@ -16,7 +16,7 @@ startpage::startpage(QWidget *parent) :
 
     mMoveing=false;
     this->setWindowOpacity(1);
-    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint |Qt::WindowStaysOnTopHint);
+    setWindowFlags(Qt::FramelessWindowHint | Qt::WindowMinimizeButtonHint);
     this->setAttribute(Qt::WA_TranslucentBackground);
     ui->tabWidget->setCurrentIndex(0);
 
@@ -219,7 +219,7 @@ void startpage::on_start_clicked()
     string buf;
     QString Qbuf;
     file.open("checkresult.txt");
-    system("class.exe>checkresult.txt");
+    WinExec("class.exe>checkresult.txt",SW_HIDE);
 
 
     char buffer[100];
